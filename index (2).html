@@ -1,0 +1,489 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Films & Series Word Bank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{
+  --bg:#F5F3F4; --surface:#FFFFFF; --surface-2:#EFEBED; --line:#E2DCDF;
+  --ink:#1D191C; --muted:#675E64;
+  --accent:#A3223F; --accent-ink:#FFFFFF; --accent-soft:#F7E4E9;
+  --hl:#FFE066; --hl-ink:#1D191C;
+  --good:#1D7349; --good-soft:#E0F1E7; --bad:#B3261E; --bad-soft:#FBE5E3;
+  --sub-bg:#1D191C; --sub-ink:#FFFFFF;
+  --screen-a:#231E22; --screen-b:#3A2F36;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#141113; --surface:#1E1A1D; --surface-2:#292428; --line:#3A3338;
+    --ink:#F3EEF1; --muted:#B1A6AD;
+    --accent:#F07A93; --accent-ink:#22090F; --accent-soft:#3B1E27;
+    --hl:#FFD84D; --hl-ink:#1D191C;
+    --good:#6BD6A0; --good-soft:#15301F; --bad:#FF8F85; --bad-soft:#3B1C1A;
+    --sub-bg:#000000; --sub-ink:#FFFFFF;
+    --screen-a:#0B090A; --screen-b:#231C21;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#141113; --surface:#1E1A1D; --surface-2:#292428; --line:#3A3338;
+  --ink:#F3EEF1; --muted:#B1A6AD;
+  --accent:#F07A93; --accent-ink:#22090F; --accent-soft:#3B1E27;
+  --hl:#FFD84D; --hl-ink:#1D191C;
+  --good:#6BD6A0; --good-soft:#15301F; --bad:#FF8F85; --bad-soft:#3B1C1A;
+  --sub-bg:#000000; --sub-ink:#FFFFFF;
+  --screen-a:#0B090A; --screen-b:#231C21;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;padding-inline:16px}
+.wrap{max-width:940px;margin:0 auto;padding-block:40px 96px}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* header */
+.top{display:grid;gap:14px;padding-bottom:28px}
+.top h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6.4vw,60px);line-height:1.02;letter-spacing:-.01em}
+.top h1 span{color:var(--accent)}
+.lead{font-size:18px;max-width:60ch}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;counter-reset:st}
+.steps li{counter-increment:st;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 16px;display:grid;gap:4px;align-content:start}
+.steps li::before{content:"0" counter(st);font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:600}
+.steps b{font-size:15px}
+.steps span{font-size:14px;color:var(--muted)}
+
+/* toolbar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:10px 16px}
+.bar-in{max-width:940px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between}
+.bar nav{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}
+.bar nav a{color:var(--muted);text-decoration:none}
+.bar nav a:hover{color:var(--ink);text-decoration:underline}
+.btn{font:inherit;font-size:14px;font-weight:600;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{border-color:var(--muted)}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* sections */
+section.block{padding-top:44px;display:grid;gap:18px;scroll-margin-top:70px}
+.sec-head{display:grid;gap:6px}
+.sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(22px,3.4vw,30px);line-height:1.15}
+.sec-head p{max-width:62ch}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-weight:600;vertical-align:middle}
+
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.cards{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.card.key{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.c-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.term{font-size:19px;font-weight:700;line-height:1.25}
+.term .alt{font-weight:500;color:var(--muted)}
+.stress{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.02em}
+.say{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.say:hover{border-color:var(--accent);color:var(--accent)}
+.say svg{width:17px;height:17px}
+.no-speech .say{display:none}
+.tr{color:var(--accent);font-weight:600;cursor:default;border-radius:6px;transition:filter .15s}
+.hide-tr .tr{filter:blur(6px);cursor:pointer;user-select:none;background:var(--surface-2)}
+.hide-tr .tr.shown{filter:none;background:transparent}
+.def{font-size:15px;color:var(--muted)}
+.ex{margin-top:auto;padding-top:4px}
+.ex span{background:var(--sub-bg);color:var(--sub-ink);font-weight:500;font-size:15px;padding:3px 8px;border-radius:5px;line-height:1.9;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.note{font-size:14px;background:var(--accent-soft);border-radius:8px;padding:8px 10px}
+.note b{color:var(--accent)}
+
+.scale{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.scale .lvl{display:flex;flex-direction:column;gap:2px;padding:8px 12px;border-radius:10px;background:var(--surface-2);min-width:110px}
+.scale .lvl b{font-size:17px}
+.scale .lvl span{font-size:13px;color:var(--muted)}
+.scale .arr{color:var(--muted);font-family:var(--mono)}
+.scale p{flex-basis:100%;font-size:14px;color:var(--muted);margin-top:4px}
+
+/* details */
+details.more{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
+details.more summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:17px;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"+";font-family:var(--mono);font-size:20px;color:var(--accent)}
+details.more[open] summary::after{content:"–"}
+details.more .cards{padding-bottom:16px}
+details.more .card{background:var(--surface-2);border-color:transparent}
+
+/* quiz */
+.quiz{display:grid;gap:12px}
+.qq{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px}
+.qq p.q{font-weight:600;font-size:17px}
+.qq .n{font-family:var(--mono);color:var(--accent);font-size:13px;margin-right:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:inherit;font-size:15px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--muted)}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--good-soft);border-color:var(--good);color:var(--good);font-weight:600}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);text-decoration:line-through}
+.fb{font-size:14px}
+.fb.ok{color:var(--good)} .fb.no{color:var(--bad)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:14px 16px}
+.score b{font-family:var(--mono);font-size:18px}
+
+/* builder */
+.builder{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+@media (max-width:760px){.builder{grid-template-columns:1fr}}
+.fields{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.field{display:grid;gap:4px}
+.field label{font-size:13px;color:var(--muted)}
+.field .row{display:flex;align-items:baseline;gap:8px}
+.field .row span{font-weight:600;white-space:nowrap}
+.field input{font:inherit;font-size:16px;width:100%;min-width:0;padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.screen{aspect-ratio:16/10;max-width:100%;border-radius:14px;background:radial-gradient(120% 90% at 50% 20%,var(--screen-b),var(--screen-a));display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:18px 16px;gap:6px;text-align:center;position:relative;overflow:hidden}
+.screen .rec{position:absolute;top:12px;left:14px;font-family:var(--mono);font-size:11px;color:#CFC6CB;letter-spacing:.08em}
+.screen .rec i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#E0405E;margin-right:6px;vertical-align:1px}
+.screen p{color:#FFFFFF;font-weight:600;font-size:clamp(14px,2vw,18px);line-height:1.35;text-shadow:0 1px 2px #000,0 0 6px rgba(0,0,0,.7)}
+.screen p.empty{color:#9C9197;font-weight:500}
+.builder-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.copied{font-size:14px;color:var(--good)}
+.example{font-size:14px;color:var(--muted)}
+.example b{color:var(--ink);font-weight:600}
+
+footer{padding-top:56px;font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="wrap" style="padding-bottom:28px">
+  <header class="top">
+    <p class="eyebrow">Weekly call · Films &amp; Series · A1–A2</p>
+    <h1>Films &amp; Series<br><span>Word Bank</span></h1>
+    <p class="lead">Слова и фразы для созвона про кино и сериалы. Выучи их заранее, и на уроке будет легко говорить.</p>
+  </header>
+
+  <ol class="steps" aria-label="Before the call">
+    <li><b>Listen and repeat</b><span>Нажимай ▶ у каждого слова и повторяй вслух. Обрати внимание на ударение.</span></li>
+    <li><b>Test yourself</b><span>Нажми «Скрыть перевод» и попробуй вспомнить значение. Нажми на размытое слово, чтобы проверить.</span></li>
+    <li><b>Mini quiz</b><span>6 коротких вопросов внизу страницы.</span></li>
+    <li><b>Choose a secret film</b><span>Загадай фильм или сериал и подготовь 3–4 предложения для игры. Название никому не говори!</span></li>
+  </ol>
+</div>
+
+<div class="bar"><div class="bar-in">
+  <nav aria-label="Sections">
+    <a href="#genres">Genres</a>
+    <a href="#phrases">Phrases</a>
+    <a href="#describe">Describe it</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#secret">My secret film</a>
+  </nav>
+  <button class="btn" id="toggleTr" aria-pressed="false" type="button">Скрыть перевод</button>
+</div></div>
+
+<main class="wrap" style="padding-top:0">
+  <section class="block" id="genres">
+    <div class="sec-head">
+      <p class="eyebrow">10 words</p>
+      <h2>Genres · жанры</h2>
+      <p class="muted">Почти как по-русски, но ударение часто другое. Слушай и повторяй: <b>COM</b>edy, carTOON, docu<b>MEN</b>tary.</p>
+    </div>
+    <div class="cards" id="c-genres"></div>
+  </section>
+
+  <section class="block" id="phrases">
+    <div class="sec-head">
+      <p class="eyebrow">10 phrases</p>
+      <h2>Talking about films <span class="tag">main words</span></h2>
+      <p class="muted">Это главные фразы урока. Мы будем использовать их в игре на созвоне.</p>
+    </div>
+    <div class="cards" id="c-phrases"></div>
+  </section>
+
+  <section class="block" id="describe">
+    <div class="sec-head">
+      <p class="eyebrow">8 words + 3 helpers</p>
+      <h2>What's it like? · какой он?</h2>
+      <p class="muted">Слова, чтобы сказать своё мнение о фильме.</p>
+    </div>
+    <div class="cards" id="c-adj"></div>
+    <div class="scale" aria-label="How much">
+      <div class="lvl"><b>a bit</b><span>немного</span></div>
+      <span class="arr">→</span>
+      <div class="lvl"><b>really / very</b><span>очень</span></div>
+      <span class="arr">→</span>
+      <div class="lvl"><b>so</b><span>такой / так</span></div>
+      <p><b>a bit</b> обычно ставим перед «плохими» словами: a bit boring, a bit scary. А не a bit amazing.</p>
+    </div>
+
+    <details class="more">
+      <summary>Level up: for B1 and higher</summary>
+      <div class="cards" id="c-plus"></div>
+    </details>
+  </section>
+
+  <section class="block" id="quiz">
+    <div class="sec-head">
+      <p class="eyebrow">6 questions</p>
+      <h2>Mini quiz</h2>
+      <p class="muted">Выбери ответ. Если ошибся, прочитай подсказку и попробуй ещё раз.</p>
+    </div>
+    <div class="quiz" id="quizBox"></div>
+    <div class="score">
+      <span>Your score: <b id="score">0 / 6</b></span>
+      <button class="btn" type="button" id="resetQuiz">Пройти ещё раз</button>
+    </div>
+  </section>
+
+  <section class="block" id="secret">
+    <div class="sec-head">
+      <p class="eyebrow">Homework before the call</p>
+      <h2>My secret film</h2>
+      <p class="muted">На созвоне будет игра <b>Guess my film</b>: ты описываешь фильм или сериал, а все угадывают. Подготовь подсказки здесь. Название не пиши!</p>
+    </div>
+    <div class="builder">
+      <div>
+        <div class="fields">
+          <div class="field">
+            <label for="f1">Genre · жанр</label>
+            <div class="row"><span>It's</span><input id="f1" placeholder="a cartoon" autocomplete="off"></div>
+          </div>
+          <div class="field">
+            <label for="f2">What happens · о чём он</label>
+            <div class="row"><span>It's about</span><input id="f2" placeholder="a fish who looks for his son" autocomplete="off"></div>
+          </div>
+          <div class="field">
+            <label for="f3">Main character · главный герой</label>
+            <div class="row"><span>The main character is</span><input id="f3" placeholder="a small orange fish" autocomplete="off"></div>
+          </div>
+          <div class="field">
+            <label for="f4">Your opinion · твоё мнение</label>
+            <div class="row"><span>It's</span><input id="f4" placeholder="really funny and a bit sad" autocomplete="off"></div>
+          </div>
+        </div>
+        <div class="builder-actions">
+          <button class="btn primary" type="button" id="copyClues">Скопировать подсказки</button>
+          <span class="copied" id="copied" hidden>Скопировано</span>
+        </div>
+      </div>
+      <div style="display:grid;gap:10px">
+        <div class="screen" aria-live="polite">
+          <span class="rec"><i></i>YOUR CLUES</span>
+          <div id="subs"></div>
+        </div>
+        <p class="example">Серые слова в полях — это пример. Угадаешь фильм? <b>Finding Nemo</b> («В поисках Немо»).</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>See you at the call! Не страшно ошибаться: главное — пробовать говорить.</footer>
+</main>
+
+<script>
+(function(){
+  var GENRES = [
+    {t:'comedy', s:'COM·e·dy', tr:'комедия', d:'a funny film that makes you laugh', ex:'Friends is my favourite comedy series.'},
+    {t:'action film', s:'AC·tion film', tr:'боевик', d:'a film with fights, car chases and explosions', ex:'I love action films with fast cars.'},
+    {t:'horror film', s:'HOR·ror film', tr:'фильм ужасов', d:'a very scary film', ex:'I never watch horror films at night.'},
+    {t:'thriller', s:'THRIL·ler', tr:'триллер', d:'an exciting film about danger or a crime', ex:'The thriller is about a bank robbery.'},
+    {t:'sci-fi', s:'SAI-fai', tr:'научная фантастика', d:'a film about space, robots or the future (= science fiction)', ex:'Star Wars is a famous sci-fi film.', say:'sci-fi. science fiction'},
+    {t:'fantasy', s:'FAN·ta·sy', tr:'фэнтези', d:'a story with magic, dragons and wizards', ex:'The Lord of the Rings is a fantasy film.'},
+    {t:'romantic comedy', alt:'rom-com', s:'ro·MAN·tic COM·e·dy', tr:'романтическая комедия', d:'a funny love story', ex:'My sister loves rom-coms.'},
+    {t:'drama', s:'DRA·ma', tr:'драма', d:'a serious story about people and their lives', ex:"It's a sad drama about a family."},
+    {t:'cartoon', alt:'animated film', s:'car·TOON · AN·i·ma·ted film', tr:'мультфильм', d:'a film with drawings or computer animation', ex:'Toy Story is a famous cartoon.'},
+    {t:'documentary', s:'doc·u·MEN·ta·ry', tr:'документальный фильм', d:'a film about real life, nature or history', ex:'I watched a documentary about sharks.'}
+  ];
+  var PHRASES = [
+    {t:'a series', alt:'a TV show', s:'SEER·eez', tr:'сериал', d:'a story in many parts, on TV or online', ex:'My favourite series is The Simpsons.', note:'<b>One series, two series</b> — форма не меняется.'},
+    {t:'an episode', alt:'a season', s:'EP·i·sode · SEA·son', tr:'серия · сезон', d:'one part of a series · a group of episodes', ex:'The first season has ten episodes.', note:'<b>Ложный друг:</b> «серия» — это episode, а не series.'},
+    {t:'the main character', s:'the main CHAR·ac·ter', tr:'главный герой', d:'the most important person in the story', ex:'The main character is a young detective.'},
+    {t:"It's about…", tr:'Он о… · Он про…', d:'what happens in the story', ex:"It's about a girl who can talk to animals.", say:"It's about"},
+    {t:"It's set in…", tr:'Действие происходит в…', d:'the place or the time of the story', ex:"It's set in London in the future.", say:"It's set in"},
+    {t:'with subtitles', alt:'in the original', s:'SUB·ti·tles · o·RI·gi·nal', tr:'с субтитрами · в оригинале', d:'words at the bottom of the screen · in the real language of the film', ex:'I watch series in the original with English subtitles.'},
+    {t:'binge-watch', s:'BINJ-watch', tr:'смотреть запоем', d:'watch many episodes one after another', ex:'I binge-watched the whole season in one weekend!'},
+    {t:'a happy ending', alt:'a sad ending', tr:'счастливый · грустный конец', d:'how the story finishes', ex:'I like films with a happy ending.'},
+    {t:'No spoilers!', tr:'Без спойлеров!', d:"Don't tell me what happens!", ex:"Don't tell me the ending! No spoilers!"},
+    {t:'I recommend it.', s:'I rec·om·MEND it', tr:'Советую!', d:'I think you should watch it', ex:"It's really funny. I recommend it!"}
+  ];
+  var ADJ = [
+    {t:'funny', s:'FUN·ny', tr:'смешной', d:'it makes you laugh', ex:'The dog in this film is so funny!'},
+    {t:'scary', s:'SCAIR·y', tr:'страшный', d:'it makes you afraid', ex:"It's really scary. I can't sleep!", note:'<b>scary</b> = страшный, а <b>terrible</b> = очень плохой. Не путай!'},
+    {t:'exciting', s:'ex·CI·ting', tr:'захватывающий', d:'full of action, you want to know what happens', ex:'The last episode is very exciting.'},
+    {t:'boring', s:'BOR·ing', tr:'скучный', d:'not interesting at all', ex:'The film is long and a bit boring.'},
+    {t:'sad', tr:'грустный', d:'it makes you cry', ex:'The ending is so sad. I cried!'},
+    {t:'interesting', s:'IN·ter·est·ing', tr:'интересный', d:'you want to know more', ex:"It's an interesting story about a real person."},
+    {t:'amazing', s:'a·MA·zing', tr:'потрясающий', d:'very, very good', ex:'The music in this film is amazing!'},
+    {t:'terrible', s:'TER·ri·ble', tr:'ужасный, очень плохой', d:'very, very bad', ex:'The actors in this film are terrible.'}
+  ];
+  var PLUS = [
+    {t:'a plot twist', tr:'неожиданный поворот сюжета', d:'a surprise in the story that changes everything', ex:"There's a great plot twist at the end."},
+    {t:'gripping', s:'GRIP·ping', tr:'захватывающий, не оторваться', d:"so exciting that you can't stop watching", ex:'The story is gripping from the first minute.'},
+    {t:'predictable', s:'pre·DIC·ta·ble', tr:'предсказуемый', d:'you know what happens next', ex:'The ending is so predictable.'},
+    {t:"It's worth watching.", tr:'Его стоит посмотреть.', d:'good enough to spend your time on', ex:"It's long, but it's worth watching."},
+    {t:'overrated', alt:'underrated', s:'o·ver·RA·ted', tr:'переоценённый · недооценённый', d:'not as good as people say · better than people think', ex:"Everyone loves it, but I think it's overrated."},
+    {t:'The acting is brilliant.', tr:'Актёры играют блестяще.', d:'the actors do a great job', ex:'The acting is brilliant, especially the main character.'}
+  ];
+
+  var hasSpeech = ('speechSynthesis' in window) && typeof window.SpeechSynthesisUtterance === 'function';
+  if(!hasSpeech) document.documentElement.classList.add('no-speech');
+  var voice = null;
+  function pickVoice(){
+    try{
+      var vs = window.speechSynthesis.getVoices() || [];
+      voice = vs.find(function(v){return /en-GB/i.test(v.lang) && /Google|Natural|Daniel|Serena|Kate|Libby|Sonia/i.test(v.name);})
+           || vs.find(function(v){return /en-GB/i.test(v.lang);})
+           || vs.find(function(v){return /^en/i.test(v.lang);}) || null;
+    }catch(e){voice=null;}
+  }
+  if(hasSpeech){ pickVoice(); try{ window.speechSynthesis.onvoiceschanged = pickVoice; }catch(e){} }
+  function say(text){
+    if(!hasSpeech) return;
+    try{
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = voice ? voice.lang : 'en-GB';
+      if(voice) u.voice = voice;
+      u.rate = 0.88;
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  var ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function speakText(w){
+    if(w.say) return w.say;
+    return (w.t + (w.alt ? '. ' + w.alt : '')).replace(/…/g,'');
+  }
+  function card(w, key){
+    var el = document.createElement('article');
+    el.className = 'card' + (key ? ' key' : '');
+    el.innerHTML =
+      '<div class="c-head"><div><h3 class="term">' + esc(w.t) + (w.alt ? ' <span class="alt">/ ' + esc(w.alt) + '</span>' : '') + '</h3>' +
+      (w.s ? '<p class="stress">' + esc(w.s) + '</p>' : '') + '</div>' +
+      '<button class="say" type="button" aria-label="Listen: ' + esc(w.t) + '">' + ICON + '</button></div>' +
+      '<p class="tr" tabindex="0">' + esc(w.tr) + '</p>' +
+      '<p class="def">' + esc(w.d) + '</p>' +
+      (w.note ? '<p class="note">' + w.note + '</p>' : '') +
+      '<p class="ex"><span>' + esc(w.ex) + '</span></p>';
+    el.querySelector('.say').addEventListener('click', function(){ say(speakText(w)); });
+    var tr = el.querySelector('.tr');
+    function reveal(){ tr.classList.toggle('shown'); }
+    tr.addEventListener('click', reveal);
+    tr.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); reveal(); } });
+    return el;
+  }
+  function fill(id, list, key){
+    var box = document.getElementById(id);
+    list.forEach(function(w){ box.appendChild(card(w, key)); });
+  }
+  fill('c-genres', GENRES);
+  fill('c-phrases', PHRASES, true);
+  fill('c-adj', ADJ);
+  fill('c-plus', PLUS);
+
+  var tBtn = document.getElementById('toggleTr');
+  tBtn.addEventListener('click', function(){
+    var on = document.body.classList.toggle('hide-tr');
+    tBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    tBtn.textContent = on ? 'Показать перевод' : 'Скрыть перевод';
+    document.querySelectorAll('.tr.shown').forEach(function(t){ t.classList.remove('shown'); });
+  });
+
+  /* quiz */
+  var QUIZ = [
+    {q:'A film with magic, dragons and wizards is…', o:['a documentary','fantasy','a thriller'], a:1, why:'fantasy = фэнтези: магия, драконы, волшебники.'},
+    {q:'«Серия» in English is…', o:['a series','a season','an episode'], a:2, why:'series = сериал, season = сезон, episode = серия.'},
+    {q:"The story happens in Tokyo. It's ___ in Tokyo.", o:['about','set','watched'], a:1, why:"It's set in… = действие происходит в…"},
+    {q:'"I watched 8 episodes in one day!" I ___ the series.', o:['recommended','binge-watched','set'], a:1, why:'binge-watch = смотреть много серий подряд, запоем.'},
+    {q:'"Don\'t tell me the ending!" — "OK, no ___!"', o:['subtitles','spoilers','seasons'], a:1, why:'No spoilers! = без спойлеров, не рассказывай, что будет.'},
+    {q:'scary = …', o:['смешной','ужасно плохой','страшный'], a:2, why:'scary = страшный. «Очень плохой» — это terrible.'}
+  ];
+  var solved = {};
+  var box = document.getElementById('quizBox');
+  function renderQuiz(){
+    box.innerHTML = ''; solved = {};
+    QUIZ.forEach(function(item, i){
+      var d = document.createElement('div');
+      d.className = 'qq';
+      d.innerHTML = '<p class="q"><span class="n">0' + (i+1) + '</span>' + esc(item.q) + '</p><div class="opts"></div><p class="fb" hidden></p>';
+      var opts = d.querySelector('.opts'), fb = d.querySelector('.fb');
+      item.o.forEach(function(o, j){
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'opt'; b.textContent = o;
+        b.addEventListener('click', function(){
+          if(solved[i]) return;
+          if(j === item.a){
+            b.classList.add('right');
+            opts.querySelectorAll('.opt').forEach(function(x){ x.disabled = true; });
+            fb.hidden = false; fb.className = 'fb ok'; fb.textContent = 'Right! ' + item.why;
+            solved[i] = true;
+            updateScore();
+          } else {
+            b.classList.add('wrong'); b.disabled = true;
+            fb.hidden = false; fb.className = 'fb no'; fb.textContent = 'Not quite. Try again!';
+            solved['miss' + i] = true;
+          }
+        });
+        opts.appendChild(b);
+      });
+      box.appendChild(d);
+    });
+    updateScore();
+  }
+  function updateScore(){
+    var n = 0;
+    QUIZ.forEach(function(_, i){ if(solved[i] && !solved['miss' + i]) n++; });
+    var done = QUIZ.filter(function(_, i){ return solved[i]; }).length;
+    document.getElementById('score').textContent = n + ' / ' + QUIZ.length + (done === QUIZ.length ? ' с первой попытки' : '');
+  }
+  document.getElementById('resetQuiz').addEventListener('click', renderQuiz);
+  renderQuiz();
+
+  /* secret film builder */
+  var ids = ['f1','f2','f3','f4'];
+  var pre = ["It's ", "It's about ", 'The main character is ', "It's "];
+  var subs = document.getElementById('subs');
+  function lines(){
+    var out = [];
+    ids.forEach(function(id, i){
+      var v = document.getElementById(id).value.trim().replace(/[.!]+$/,'');
+      if(v) out.push(pre[i] + v + '.');
+    });
+    return out;
+  }
+  function render(){
+    var l = lines();
+    try{ localStorage.setItem('ws-secret-film', JSON.stringify(ids.map(function(id){ return document.getElementById(id).value; }))); }catch(e){}
+    if(!l.length){
+      subs.innerHTML = '<p class="empty">It\'s a cartoon.</p><p class="empty">It\'s about a fish who looks for his son.</p>';
+      return;
+    }
+    subs.innerHTML = l.slice(-3).map(function(s){ return '<p>' + esc(s) + '</p>'; }).join('');
+  }
+  try{
+    var saved = JSON.parse(localStorage.getItem('ws-secret-film') || 'null');
+    if(Array.isArray(saved)) ids.forEach(function(id, i){ if(typeof saved[i] === 'string') document.getElementById(id).value = saved[i]; });
+  }catch(e){}
+  ids.forEach(function(id){ document.getElementById(id).addEventListener('input', render); });
+  render();
+
+  var copied = document.getElementById('copied');
+  document.getElementById('copyClues').addEventListener('click', function(){
+    var text = lines().join(' ');
+    if(!text){ copied.hidden = false; copied.style.color = 'var(--muted)'; copied.textContent = 'Сначала заполни поля'; return; }
+    function ok(){ copied.hidden = false; copied.style.color = ''; copied.textContent = 'Скопировано'; setTimeout(function(){ copied.hidden = true; }, 2200); }
+    function fallback(){
+      var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); ok(); }catch(e){ copied.hidden = false; copied.textContent = 'Выдели текст на экране и скопируй вручную'; }
+      document.body.removeChild(ta);
+    }
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(ok, fallback); }
+      else fallback();
+    }catch(e){ fallback(); }
+  });
+})();
+</script>
+
+</body></html>
